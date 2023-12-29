@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "footers",
+  "collectionName": "navigations",
   "info": {
-    "singularName": "footer",
-    "pluralName": "footers",
-    "displayName": "Footer"
+    "singularName": "navigation",
+    "pluralName": "navigations",
+    "displayName": "Navigation"
   },
   "options": {
     "draftAndPublish": true
@@ -16,7 +16,6 @@
   },
   "attributes": {
     "links": {
-      "displayName": "Link",
       "type": "component",
       "repeatable": true,
       "pluginOptions": {
@@ -24,7 +23,8 @@
           "localized": true
         }
       },
-      "component": "common.link"
+      "component": "common.link",
+      "required": true
     }
   }
 }

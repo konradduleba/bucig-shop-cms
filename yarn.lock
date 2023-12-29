@@ -3225,7 +3225,7 @@
     "@strapi/utils" "4.16.2"
     sendmail "^1.6.1"
 
-"@strapi/provider-upload-aws-s3@^4.16.2":
+"@strapi/provider-upload-aws-s3@4.16.2":
   version "4.16.2"
   resolved "https://registry.yarnpkg.com/@strapi/provider-upload-aws-s3/-/provider-upload-aws-s3-4.16.2.tgz#d09b21e2eb98436c39521992a4e489ba4796f4ea"
   integrity sha512-CDvFDGZDPrweDDGHtLIT56c4FbI+nt6WtNQtoqW2f9jeHnHjUXNSGXBpkpviT1my7EmcTC59E9iA+uZqS8F3cA==

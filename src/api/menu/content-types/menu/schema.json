@@ -1,10 +1,11 @@
 {
   "kind": "singleType",
-  "collectionName": "footers",
+  "collectionName": "menus",
   "info": {
-    "singularName": "footer",
-    "pluralName": "footers",
-    "displayName": "Footer"
+    "singularName": "menu",
+    "pluralName": "menus",
+    "displayName": "Menu",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,7 +17,7 @@
   },
   "attributes": {
     "links": {
-      "displayName": "Link",
+      "displayName": "LinkWithImage",
       "type": "component",
       "repeatable": true,
       "pluginOptions": {
@@ -24,7 +25,8 @@
           "localized": true
         }
       },
-      "component": "common.link"
+      "component": "common.link-with-image",
+      "required": true
     }
   }
 }

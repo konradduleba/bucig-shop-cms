@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_general_open_hours",
+  "info": {
+    "displayName": "OpenHours",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "day": {
+      "type": "string",
+      "required": true
+    },
+    "from": {
+      "type": "time",
+      "required": true,
+      "default": "00:00"
+    },
+    "to": {
+      "type": "time",
+      "required": true,
+      "default": "00:00"
+    }
+  }
+}
