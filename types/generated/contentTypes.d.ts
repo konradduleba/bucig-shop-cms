@@ -899,6 +899,61 @@ export interface ApiHomeHome extends Schema.SingleType {
   };
 }
 
+export interface ApiLoginLogin extends Schema.SingleType {
+  collectionName: 'logins';
+  info: {
+    singularName: 'login';
+    pluralName: 'logins';
+    displayName: 'Login';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    seo: Attribute.Component<'common.seo'> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    backgroundImage: Attribute.Media &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::login.login',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::login.login',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::login.login',
+      'oneToMany',
+      'api::login.login'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiMenuMenu extends Schema.SingleType {
   collectionName: 'menus';
   info: {
@@ -1007,6 +1062,7 @@ declare module '@strapi/types' {
       'api::footer.footer': ApiFooterFooter;
       'api::general.general': ApiGeneralGeneral;
       'api::home.home': ApiHomeHome;
+      'api::login.login': ApiLoginLogin;
       'api::menu.menu': ApiMenuMenu;
       'api::navigation.navigation': ApiNavigationNavigation;
     }
